@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "458878421940",
+    "project_id": "basicinstagramjava",
+    "storage_bucket": "basicinstagramjava.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458878421940:android:09f14fc83ecf7e1daa00e1",
+        "android_client_info": {
+          "package_name": "com.muradaslanov.basicinstagramjava"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458878421940-q1dq2biijh5qh81f2ejrudg9lgop12ee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjJ405XpnZCvg-Flfb5l3XUghB1dWO_gk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "458878421940-q1dq2biijh5qh81f2ejrudg9lgop12ee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
