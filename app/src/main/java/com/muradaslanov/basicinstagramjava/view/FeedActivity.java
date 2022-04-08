@@ -1,5 +1,7 @@
 package com.muradaslanov.basicinstagramjava.view;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +13,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -39,6 +42,7 @@ public class FeedActivity extends AppCompatActivity {
     private FirebaseFirestore firebaseFirestore;
     com.muradaslanov.basicinstagramjava.adapter.PostAdapter postAdapter;
     ArrayList<Post> postArrayList;
+    SwipeRefreshLayout swipeRefreshLayout;
 
 
 
@@ -48,6 +52,17 @@ public class FeedActivity extends AppCompatActivity {
         binding = ActivityFeedBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+
+        swipeRefreshLayout = binding.swipeFresh;
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                Intent selfIntent = new Intent(FeedActivity.this,FeedActivity.class);
+                swipeRefreshLayout.setRefreshing(false);
+                startActivity(selfIntent);
+                finish();
+            }
+        });
 
 
         auth = FirebaseAuth.getInstance();
