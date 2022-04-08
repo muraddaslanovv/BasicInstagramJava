@@ -15,10 +15,10 @@
         android:id="@+id/recyclerViewUserEmailtext"></TextView>
 
     <ImageView
-        android:layout_width="350dp"
-        android:layout_height="500dp"
-        android:layout_gravity="center"
-        android:id="@+id/recyclerViewImageView"></ImageView>
+        android:id="@+id/recyclerViewImageView"
+        android:layout_width="299dp"
+        android:layout_height="347dp"
+        android:layout_gravity="center"></ImageView>
 
     <TextView
         android:layout_width="match_parent"

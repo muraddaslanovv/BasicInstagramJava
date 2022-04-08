@@ -3,7 +3,11 @@ package com.muradaslanov.basicinstagramjava.view;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -45,6 +49,7 @@ public class FeedActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
+
         auth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
 
@@ -79,9 +84,7 @@ firebaseFirestore.collection("Posts").orderBy("date", Query.Direction.DESCENDING
                 postArrayList.add(post);
 
             }
-
             postAdapter.notifyDataSetChanged();
-
         }
     }
 });

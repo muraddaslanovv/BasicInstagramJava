@@ -183,11 +183,11 @@ public class UploadActivity extends AppCompatActivity {
                                 if(Build.VERSION.SDK_INT >= 28){
                                     source = ImageDecoder.createSource(UploadActivity.this.getContentResolver(),imageData);
                                     selectedBitmap = ImageDecoder.decodeBitmap(source);
-                                    reducedBitmap = compressImage(selectedBitmap,500);
+                                    reducedBitmap = compressImage(selectedBitmap,1000);
                                     binding.imageView.setImageBitmap(reducedBitmap);
                                 }else{
                                      selectedBitmap = MediaStore.Images.Media.getBitmap(UploadActivity.this.getContentResolver(),imageData);
-                                     reducedBitmap = compressImage(selectedBitmap,500);
+                                     reducedBitmap = compressImage(selectedBitmap,1000);
                                      binding.imageView.setImageBitmap(reducedBitmap);
                                 }
 
